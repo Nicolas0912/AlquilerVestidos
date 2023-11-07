@@ -1,18 +1,9 @@
-import { useNavigate } from "react-router-dom"
-
 export function TaskCard({ task }) {
-
-  const navigate = useNavigate();
-
   return (
-    <div className="bg-zinc-800 p-3 hover:bg-zinc-600 hover:cursor-pointer"
-    onClick={() => {
-        navigate(`/tasks/${task.id}`)
-      }}
-    >
-        <h1 className="font-bold uppercase text-white">{task.title}</h1>
-        <hr />  
-        <p className="text-gray-300">{task.description}</p>
+    <div>
+        <h1>{task.title}</h1>
+        <p>{task.description}</p>
+        <hr/>
     </div>
   )
 }
